@@ -1,0 +1,69 @@
+@media (min-width: 320px) and (max-width:576px) {
+    *, ::after, ::before {
+        font-size: 9px;
+        
+    
+    }
+    .wrapper {
+        width: 100%;
+        max-width: 576px;
+        margin: 0 auto;
+    }
+    nav {
+        display: none;
+    }
+    .header-flex  {
+        justify-content: center;
+    }
+    .wedo-flex {
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    .wedo-item {
+        width: 100%;
+    }
+    
+    .ourworks {
+        flex-direction: column;
+    }
+    .works_item {
+        width: 100%;
+    }
+    .team {
+       padding-left: 7.348%;
+    }
+    .test {
+        display: none;
+    }
+    .contact-flex {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40vh;
+        
+    }
+    .contact_flex_item h5 {
+        margin-bottom: 5%;
+    }
+    .contact_flex_item {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .social-icon-contact {
+        justify-content: space-between;
+    }
+    .name {
+       display: block;
+    }
+
+}
+@media (max-width: 681px){
+    .header-flex {
+        justify-content: center;
+    }
+    nav {
+        display: none;
+    }
+   
+}
