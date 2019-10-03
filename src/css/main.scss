@@ -1,16 +1,33 @@
+
+
+
+$format: screen;
+$mobile: 368px;
+$tablet: 800px;
+$desktop: 1200px;
+
+//media
+
+
+
 *, ::after, ::before {
     margin: 0;
     padding: 0;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
 
+}
+html,
+body {
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 .wrapper {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    
 }
 /*
 
@@ -19,25 +36,36 @@
 */
 header {
     text-transform: uppercase;
-    
     height: 100vh;
-    background: url(/img/banner.jpg) center no-repeat / cover;
+    background: url(../../img/banner.png) center no-repeat / cover;
+    background-color: #ccc;
 }
 
 .header-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 90px;
     border-bottom: 0.5px solid rgba(0,0,0, 0.8);
 }
+
+
+
+
 
 .main-nav {
    display: flex;
    list-style: none; 
-   width: 100%;
-
 }
+@media (min-width:100px) and (max-width:740px) {
+    .header-flex {
+        justify-content: center;
+    }
+    .main-nav {
+        display: none;
+    }
+}
+
 .main-nav a {
     font-size: 0.9rem;
     line-height: 1.35rem; 
@@ -48,9 +76,7 @@ header {
 .main-nav a:not(first-child) {
     margin-right: 2rem;
 }
-.main-nav a:hover {
-    text-decoration: underline;
-}
+
 .main-nav a:hover {
     opacity: 1; 
     transition: 0.6s;
@@ -109,6 +135,13 @@ header {
     display: flex;
     flex-wrap: wrap;
 }
+@media (min-width: 100px) and (max-width: 600px) {
+    .wedo-flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 .wedo-item {   
     text-align: center;
     width: 33.3333%;
@@ -133,12 +166,15 @@ header {
 
 .ourworks {
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 .works_item {
-    height: 350px;
+    height: 320px;
     border: 0.7px solid #fff;
-    width: 25%;
+    width: 24.89%;
     position: relative;
     overflow: hidden;
 }
@@ -187,6 +223,8 @@ header {
 
 .team { 
     border-top: 1px solid transparent;
+    margin-top: 100px;
+    margin-bottom: 100px;
     
 }
 
@@ -195,13 +233,13 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 15vh;
-    margin-bottom: 10vh;
+    margin-left: 17.9px;
+   
     
     
 }
 .layout-flex-item {
-    max-width: 292.5px;
+    max-width: 295.5px;
     width: 100%;
     
 }
@@ -209,21 +247,19 @@ header {
     margin-bottom: 25px;
 }
 .layout-flex-item h5 {
-    font-family: Roboto;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 13px;
     margin-bottom: 2%;
 }
 .layout-flex-item span {
     text-transform: uppercase;
-    font-family: Roboto;
+   
     color: #ff3333;
     font-weight: 500;
     font-size: 13px;
 }
 .layout-flex-item p {
     width: 80%;
-    font-family: Roboto;
     font-weight: 500;
     font-size: 14px;
     margin-top: 10%;
@@ -243,34 +279,43 @@ header {
 
 */
 .test {
-    background-color: #53354a;
     overflow: hidden;
+    background-color: #431d74;
+    padding: 20px;
+}
+.test-container {
+    width: 100%;
+    
 }
 .test_flex_item {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: space-between;
+    align-items: center;
 }
-.test__img {
-    width: 50%;
-    height: 500px;
-    position: relative;
-}
+
+
+
+
 .test__img img {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    z-index: 1;
-    transform: translateY(-50%);
+  display: flex;
+  width: 100%;  
+}
+@media (min-width: 100px) and (max-width: 1070px) {
+    .test_flex_item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;  
+      }
+      .test__text {
+          width: 100%;
+      }
 }
 .test__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    padding-left: 80px;
+    width: 80%;
+    padding-left: 15px;
+
 }
 .test__text p {
-    font-family: 'Cardo', sans-serif;
     font-style: italic;
     font-size: 36px;
     line-height: 1.2;
@@ -299,7 +344,7 @@ header {
 }
 .readyspan span {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
 
 }
@@ -324,10 +369,9 @@ header {
 */
 
 .contact {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-
-    background-color:rgb(51, 51, 102, 0.95);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color:rgba(51, 51, 102, 0.95);
   
 }
 .contact-flex {
@@ -397,4 +441,5 @@ span {
 .span-1 {
     display: inline-block;
     margin: 20px 0;
+
 }
